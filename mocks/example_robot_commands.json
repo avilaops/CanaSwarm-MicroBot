@@ -1,0 +1,125 @@
+{
+  "command_id": "CMD-20260220-001",
+  "timestamp": "2026-02-20T15:00:00Z",
+  "source": "CanaSwarm-Core",
+  "mission_id": "SWARM-20260220-001",
+  "robot_id": "MICROBOT-001",
+  "robot_type": "harvester",
+  "command_type": "execute_mission",
+  "priority": "high",
+  "zone_assignment": {
+    "zone_id": "Z002",
+    "zone_name": "Zona Ótima",
+    "area_ha": 79.8,
+    "field_id": "F001-UsinaGuarani-Piracicaba"
+  },
+  "navigation_plan": {
+    "start_position": {
+      "lat": -22.7145,
+      "lon": -47.6489,
+      "heading_deg": 90,
+      "altitude_m": 550
+    },
+    "waypoints": [
+      {
+        "waypoint_id": "WP001",
+        "lat": -22.7145,
+        "lon": -47.6489,
+        "velocity_m_s": 0.8,
+        "action": "start_harvest",
+        "line_number": 1
+      },
+      {
+        "waypoint_id": "WP002",
+        "lat": -22.7145,
+        "lon": -47.6495,
+        "velocity_m_s": 1.2,
+        "action": "harvest",
+        "line_number": 1
+      },
+      {
+        "waypoint_id": "WP003",
+        "lat": -22.7145,
+        "lon": -47.6500,
+        "velocity_m_s": 0.8,
+        "action": "turn_around",
+        "line_number": 1
+      },
+      {
+        "waypoint_id": "WP004",
+        "lat": -22.7146,
+        "lon": -47.6500,
+        "velocity_m_s": 1.2,
+        "action": "harvest",
+        "line_number": 2
+      },
+      {
+        "waypoint_id": "WP005",
+        "lat": -22.7146,
+        "lon": -47.6489,
+        "velocity_m_s": 0.8,
+        "action": "end_harvest",
+        "line_number": 2
+      }
+    ],
+    "total_waypoints": 5,
+    "estimated_duration_minutes": 25,
+    "path_length_meters": 800
+  },
+  "harvest_parameters": {
+    "cutting_height_cm": 5,
+    "blade_speed_rpm": 1200,
+    "conveyor_speed_m_s": 1.5,
+    "hopper_capacity_kg": 500,
+    "unload_trigger_percent": 85
+  },
+  "coordination_rules": {
+    "maintain_formation": true,
+    "formation_spacing_m": 50,
+    "peer_robots": ["MICROBOT-002"],
+    "collision_avoidance": {
+      "min_distance_m": 10,
+      "emergency_stop_distance_m": 3,
+      "detection_range_m": 50
+    },
+    "communication": {
+      "heartbeat_interval_s": 5,
+      "report_position_interval_s": 10,
+      "mesh_network_ssid": "CanaSwarm-5GHz",
+      "coordinator_ip": "192.168.1.100"
+    }
+  },
+  "telemetry_config": {
+    "report_interval_s": 10,
+    "metrics_to_report": [
+      "position_gps",
+      "velocity_m_s",
+      "heading_deg",
+      "fuel_level_percent",
+      "battery_voltage_v",
+      "harvest_rate_kg_min",
+      "hopper_fill_percent",
+      "blade_status",
+      "lidar_obstacles_count"
+    ]
+  },
+  "safety_limits": {
+    "max_velocity_m_s": 2.5,
+    "max_slope_deg": 15,
+    "min_fuel_percent": 10,
+    "min_battery_voltage_v": 22.0,
+    "emergency_stop_triggers": [
+      "obstacle_less_than_3m",
+      "lost_gps_signal",
+      "communication_timeout_30s",
+      "fuel_below_5_percent",
+      "blade_jam_detected"
+    ]
+  },
+  "expected_results": {
+    "area_to_harvest_ha": 79.8,
+    "estimated_yield_tons": 6783,
+    "estimated_duration_hours": 8.5,
+    "revenue_estimate_brl": 97000
+  }
+}

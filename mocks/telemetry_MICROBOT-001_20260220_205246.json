@@ -1,0 +1,83 @@
+{
+  "robot_id": "MICROBOT-001",
+  "mission_id": "SWARM-20260220-001",
+  "command_id": "CMD-20260220-001",
+  "telemetry": [
+    {
+      "timestamp": "2026-02-20T20:52:43.590798",
+      "position": {
+        "lat": -22.7145,
+        "lon": -47.6489,
+        "heading_deg": 90
+      },
+      "velocity_m_s": 0.8,
+      "fuel_level_percent": 99.5,
+      "battery_voltage_v": 24.5,
+      "hopper_fill_percent": 15,
+      "harvest_rate_kg_min": 180,
+      "status": "navigating"
+    },
+    {
+      "timestamp": "2026-02-20T20:52:44.107393",
+      "position": {
+        "lat": -22.7145,
+        "lon": -47.6495,
+        "heading_deg": 90
+      },
+      "velocity_m_s": 1.2,
+      "fuel_level_percent": 99.0,
+      "battery_voltage_v": 24.5,
+      "hopper_fill_percent": 30,
+      "harvest_rate_kg_min": 180,
+      "status": "navigating"
+    },
+    {
+      "timestamp": "2026-02-20T20:52:44.621965",
+      "position": {
+        "lat": -22.7145,
+        "lon": -47.65,
+        "heading_deg": 90
+      },
+      "velocity_m_s": 0.8,
+      "fuel_level_percent": 98.5,
+      "battery_voltage_v": 24.5,
+      "hopper_fill_percent": 30,
+      "harvest_rate_kg_min": 180,
+      "status": "navigating"
+    },
+    {
+      "timestamp": "2026-02-20T20:52:45.123645",
+      "position": {
+        "lat": -22.7146,
+        "lon": -47.65,
+        "heading_deg": 90
+      },
+      "velocity_m_s": 1.2,
+      "fuel_level_percent": 98.0,
+      "battery_voltage_v": 24.5,
+      "hopper_fill_percent": 45,
+      "harvest_rate_kg_min": 180,
+      "status": "navigating"
+    },
+    {
+      "timestamp": "2026-02-20T20:52:45.636691",
+      "position": {
+        "lat": -22.7146,
+        "lon": -47.6489,
+        "heading_deg": 90
+      },
+      "velocity_m_s": 0.8,
+      "fuel_level_percent": 97.5,
+      "battery_voltage_v": 24.5,
+      "hopper_fill_percent": 45,
+      "harvest_rate_kg_min": 0,
+      "status": "navigating"
+    }
+  ],
+  "final_status": {
+    "fuel_level_percent": 97.5,
+    "battery_voltage_v": 24.5,
+    "hopper_fill_percent": 45,
+    "status": "mission_completed"
+  }
+}

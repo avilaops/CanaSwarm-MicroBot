@@ -1,0 +1,3 @@
+# CanaSwarm-MicroBot - Dependencies
+# Mock implementation uses only Python stdlib (json, math, random, datetime)
+# No external dependencies required for mock
